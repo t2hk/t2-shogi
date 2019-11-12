@@ -21,7 +21,7 @@ C_PUCT = 1.0
 # 1手当たりのプレイアウト数
 CONST_PLAYOUT = 1000
 # 投了する勝率の閾値
-RESIGN_THRESHOLD = 0.0005
+RESIGN_THRESHOLD = 0.0001
 # 温度パラメータ
 TEMPERATURE = 1.0
 
@@ -215,9 +215,7 @@ class T2Player_multi(BasePlayer):
         if option[1] == 'modelfile':
             self.modelfile = option[3]
         elif option[1] == 'playout':
-            self.playout = 500
-            if self.playout < int(option[3]):
-                self.playout = int(option[3])
+            self.playout = int(option[3])
         elif option[1] == 'temperature':
             self.temperature = int(option[3]) / 100
         elif option[1] == 'is_wobn':
