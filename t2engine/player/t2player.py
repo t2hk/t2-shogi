@@ -48,7 +48,7 @@ class T2Player_multi(BasePlayer):
     def __init__(self):
         super().__init__()
         # モデルファイルのパス
-        self.modelfile = r'model\model_resnet_multi'
+        self.modelfile = r'model\model_20191114'
         self.model = None # モデル
         self.is_wobn= False
 
